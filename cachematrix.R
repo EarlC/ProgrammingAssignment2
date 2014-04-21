@@ -1,5 +1,4 @@
 
-
 ##The function cacheSolve calculates the inverse of the matrix from makeCacheMatrix
 ##it first checks whether the inverse already exists
 ##if the inverse already exists it skips the computation and reports the value in the cache
@@ -67,7 +66,7 @@ cacheSolve <- function(x, ...) {
         
         #and calculate the inverse	
         
-        mx <- solve(data, ...)
+        mx <- solve(x)
         
         #set the value of the inverse to the cache	
         
