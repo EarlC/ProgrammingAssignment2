@@ -1,4 +1,3 @@
-
 ##The function cacheSolve calculates the inverse of the matrix from makeCacheMatrix
 ##it first checks whether the inverse already exists
 ##if the inverse already exists it skips the computation and reports the value in the cache
@@ -10,7 +9,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         
-        #create an object for the matrix and set value to NULL
+        #create an object for the inverse and set value to NULL
         
         mx <- NULL
         
@@ -43,10 +42,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-#Check for existence of inverse, get inverse if found
+#Check for existence of inverse matrix, report inverse if found
 #if not existent then calculate inverse and add to cache and report value
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x) {
         
         #look for inverse in cache
         
