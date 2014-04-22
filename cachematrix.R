@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
         
         mx <- NULL
         
-        #set the value of the matrix 
+        #set the value of the matrix
         #using the <<- operator the matrix is set outside the current environment
         
         set <- function(y) {
@@ -45,7 +45,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #Check for existence of inverse matrix, report inverse if found
 #if not existent then calculate inverse and add to cache and report value
 
-cacheSolve <- function(x) {
+cacheSolve <- function(x, ...) {
         
         #look for inverse in cache
         
@@ -59,21 +59,23 @@ cacheSolve <- function(x) {
                 return(mx)
         }
         
-        #if the inverse was not found then get the matrix	
+        #if the inverse was not found then get the matrix
         
         data <- x$get()
         
-        #and calculate the inverse	
+        #and calculate the inverse
         
         mx <- solve(x)
         
-        #set the value of the inverse to the cache	
+        #set the value of the inverse to the cache
         
         x$setinv(mx)
         
-        #and report the inverse	
+        #and report the inverse
         
         mx
 }
+
+
 
 
