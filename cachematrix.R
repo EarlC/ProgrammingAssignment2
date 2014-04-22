@@ -9,12 +9,12 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         
-        #create an object for the matrix and set value to NULL
+        #create an object for the inverse and set value to NULL
         
         mx <- NULL
         
         #set the value of the matrix 
-        #using the <<- operator the matrix is set outside the current environment
+        #using the <<- operator the matrix and inverse are set outside the current environment
         
         set <- function(y) {
                 x <<- y
@@ -33,7 +33,8 @@ makeCacheMatrix <- function(x = matrix()) {
         
         getinv <- function() mx
         
-        #create list of functions
+        #create list of functions that will be applied
+        #the results of this function can now be subset into the following function
         
         list(set = set, get = get,
              setinv = setinv,
