@@ -1,3 +1,5 @@
+
+
 ##The function cacheSolve calculates the inverse of the matrix from makeCacheMatrix
 ##it first checks whether the inverse already exists
 ##if the inverse already exists it skips the computation and reports the value in the cache
@@ -9,11 +11,11 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         
-        #create an object for the inverse and set value to NULL
+        #create an object for the matrix and set value to NULL
         
         mx <- NULL
         
-        #set the value of the matrix
+        #set the value of the matrix 
         #using the <<- operator the matrix is set outside the current environment
         
         set <- function(y) {
@@ -42,7 +44,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-#Check for existence of inverse matrix, report inverse if found
+#Check for existence of inverse, get inverse if found
 #if not existent then calculate inverse and add to cache and report value
 
 cacheSolve <- function(x, ...) {
@@ -59,23 +61,21 @@ cacheSolve <- function(x, ...) {
                 return(mx)
         }
         
-        #if the inverse was not found then get the matrix
+        #if the inverse was not found then get the matrix	
         
         data <- x$get()
         
-        #and calculate the inverse
+        #and calculate the inverse	
         
-        mx <- solve(x)
+        mx <- solve(data, ...)
         
-        #set the value of the inverse to the cache
+        #set the value of the inverse to the cache	
         
         x$setinv(mx)
         
-        #and report the inverse
+        #and report the inverse	
         
         mx
 }
-
-
 
 
