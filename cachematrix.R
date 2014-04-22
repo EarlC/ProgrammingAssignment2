@@ -1,4 +1,3 @@
-
 ##The function cacheSolve calculates the inverse of the matrix from makeCacheMatrix
 ##it first checks whether the inverse already exists
 ##if the inverse already exists it skips the computation and reports the value in the cache
@@ -85,11 +84,11 @@ x <-makeCacheMatrix(matrix(1:4, 2, 2))
 z <-cacheSolve(x)
 z
 
-    [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+#    [,1] [,2]
+#[1,]   -2  1.5
+#[2,]    1 -0.5
 
 z<-cacheSolve(x)
-getting cached data
+#getting cached data
 
 
