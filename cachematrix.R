@@ -1,5 +1,4 @@
 
-
 ##The function cacheSolve calculates the inverse of the matrix from makeCacheMatrix
 ##it first checks whether the inverse already exists
 ##if the inverse already exists it skips the computation and reports the value in the cache
@@ -54,7 +53,6 @@ cacheSolve <- function(x, ...) {
         mx <- x$getinv()
         
         #if the inverse is present return message "getting cached data"
-        #and report the inverse matrix
         
         if(!is.null(mx)) {
                 message("getting cached data")
@@ -77,5 +75,21 @@ cacheSolve <- function(x, ...) {
         
         mx
 }
+
+
+
+#Example of function operation if entered into R
+#Although the instructions say not to run the script to check it you can if you like
+
+x <-makeCacheMatrix(matrix(1:4, 2, 2))
+z <-cacheSolve(x)
+z
+
+    [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+
+z<-cacheSolve(x)
+getting cached data
 
 
